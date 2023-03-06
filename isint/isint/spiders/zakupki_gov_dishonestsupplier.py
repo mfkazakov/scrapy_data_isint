@@ -11,7 +11,7 @@ class ZakupkiDishonest(scrapy.Spider):
     finish_date = datetime.strptime('14.01.2021', "%d.%m.%Y").date()
     page_number = 1
     start_urls = [f'https://zakupki.gov.ru/epz/dishonestsupplier/search/results.html?morphology=on&search-filter=Дате+размещения&sortBy=UPDATE_DATE&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&fz94=on&fz223=on&ppRf615=on&inclusionDateFrom={start_date.strftime("%d.%m.%Y")}&inclusionDateTo={finish_date.strftime("%d.%m.%Y")}',]
-###
+
     def parse(self, response, **kwargs):
         result = []
         cards = response.xpath('//div[@class="row no-gutters registry-entry__form mr-0"]')

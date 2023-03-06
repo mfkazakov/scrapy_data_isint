@@ -25,3 +25,12 @@ class IsintItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+
+class ItemHsFromPage(scrapy.Item):
+    site = Field()
+    response_kod = Field()
+    h1 = Field()
+    h2 = Field()
+    h3 = Field()
+    h4 = Field()
